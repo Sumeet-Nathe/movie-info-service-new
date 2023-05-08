@@ -1,12 +1,11 @@
-package co.in.an.eye.tech.moviereviewservice.unit.controller;
+package co.in.an.eye.tech.movieinfoservice.unit.controller;
 
-import co.in.an.eye.tech.moviereviewservice.controller.FluxAndMonoController;
+import co.in.an.eye.tech.movieinfoservice.controller.FluxAndMonoController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
-import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
 import java.util.List;

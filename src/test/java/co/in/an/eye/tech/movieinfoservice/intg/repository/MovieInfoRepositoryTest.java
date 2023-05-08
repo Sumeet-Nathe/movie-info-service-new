@@ -1,7 +1,7 @@
-package co.in.an.eye.tech.moviereviewservice.intg.repository;
+package co.in.an.eye.tech.movieinfoservice.intg.repository;
 
-import co.in.an.eye.tech.moviereviewservice.domain.MovieInfo;
-import co.in.an.eye.tech.moviereviewservice.repository.MovieInfoRepository;
+import co.in.an.eye.tech.movieinfoservice.domain.MovieInfo;
+import co.in.an.eye.tech.movieinfoservice.repository.MovieInfoRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.util.AssertionErrors;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
@@ -103,6 +102,16 @@ class MovieInfoRepositoryTest {
 
         StepVerifier.create(log)
                 .expectNextCount(2)
+                .verifyComplete();
+    }
+
+    @Test
+    void findMovieByYear() {
+
+        Flux<MovieInfo> log = movieInfoRepository.findMovieByYear(2008).log();
+
+        StepVerifier.create(log)
+                .expectNextCount(1)
                 .verifyComplete();
     }
 

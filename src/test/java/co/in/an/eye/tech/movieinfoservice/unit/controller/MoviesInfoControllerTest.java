@@ -1,9 +1,9 @@
-package co.in.an.eye.tech.moviereviewservice.unit.controller;
+package co.in.an.eye.tech.movieinfoservice.unit.controller;
 
 
-import co.in.an.eye.tech.moviereviewservice.controller.MoviesInfoController;
-import co.in.an.eye.tech.moviereviewservice.domain.MovieInfo;
-import co.in.an.eye.tech.moviereviewservice.service.MovieInfoService;
+import co.in.an.eye.tech.movieinfoservice.controller.MoviesInfoController;
+import co.in.an.eye.tech.movieinfoservice.domain.MovieInfo;
+import co.in.an.eye.tech.movieinfoservice.service.MovieInfoService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
@@ -96,6 +96,28 @@ public class MoviesInfoControllerTest {
                 });
     }
 
+    @Test
+    void addMovieInfovalidation() {
+
+        var movie = new MovieInfo("movieId", null,
+                2008, List.of(""), LocalDate.parse("2008-07-18"));
+
+
+        webTestClient.post()
+                .uri(MOVIE_INFO_URL)
+                .bodyValue(movie)
+                .exchange()
+                .expectStatus()
+                .isBadRequest()
+                .expectBody(String.class)
+                .consumeWith(stringEntityExchangeResult -> {
+                    var reponse = stringEntityExchangeResult.getResponseBody();
+                    System.out.print(reponse);
+                    assert reponse != null;
+                    var expectedError = "movieInfo.cast must not be null or empty!,movieInfo.name must not be null or empty!";
+                    assertEquals(expectedError,reponse);
+                });
+    }
     @Test
     void updateMovieInfoById() {
 

@@ -1,13 +1,13 @@
-package co.in.an.eye.tech.moviereviewservice;
+package co.in.an.eye.tech.movieinfoservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieReviewServiceApplication {
+public class MovieInfoServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieReviewServiceApplication.class, args);
+		SpringApplication.run(MovieInfoServiceApplication.class, args);
 	}
 
 }

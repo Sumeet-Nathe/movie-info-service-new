@@ -1,4 +1,4 @@
-package co.in.an.eye.tech.moviereviewservice.controller;
+package co.in.an.eye.tech.movieinfoservice.controller;
 
 
 import org.springframework.http.MediaType;

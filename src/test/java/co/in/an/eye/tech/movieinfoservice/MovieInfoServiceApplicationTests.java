@@ -1,4 +1,4 @@
-package co.in.an.eye.tech.moviereviewservice;
+package co.in.an.eye.tech.movieinfoservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

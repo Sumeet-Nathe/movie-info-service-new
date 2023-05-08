@@ -1,7 +1,7 @@
-package co.in.an.eye.tech.moviereviewservice.service;
+package co.in.an.eye.tech.movieinfoservice.service;
 
-import co.in.an.eye.tech.moviereviewservice.domain.MovieInfo;
-import co.in.an.eye.tech.moviereviewservice.repository.MovieInfoRepository;
+import co.in.an.eye.tech.movieinfoservice.domain.MovieInfo;
+import co.in.an.eye.tech.movieinfoservice.repository.MovieInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -39,5 +39,9 @@ public class MovieInfoService {
                     movieInfo1.setReleaseDate(movieInfo.getReleaseDate());
                     return movieInfoRepository.save(movieInfo1);
                 });
+    }
+
+    public Flux<MovieInfo> getMoviesByYear(Integer year) {
+        return movieInfoRepository.findMovieByYear(year);
     }
 }

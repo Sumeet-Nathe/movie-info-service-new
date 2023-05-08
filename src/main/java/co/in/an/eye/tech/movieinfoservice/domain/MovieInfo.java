@@ -1,4 +1,4 @@
-package co.in.an.eye.tech.moviereviewservice.domain;
+package co.in.an.eye.tech.movieinfoservice.domain;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -24,6 +24,6 @@ public class MovieInfo {
     @NotNull(message = "movieInfo.year must not be null or empty!")
     @Positive(message = "movieInfo.year must not be negative!")
     private Integer year;
-    private List<String>cast;
+    private List<@NotBlank(message = "movieInfo.cast must not be null or empty!") String>cast;
     private LocalDate releaseDate;
 }
