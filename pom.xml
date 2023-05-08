@@ -11,7 +11,7 @@
 	<groupId>co.in.an.eye.tech</groupId>
 	<artifactId>movie-info-service</artifactId>
 	<version>1.0.0</version>
-	<name>movie-review-service</name>
+	<name>movie-info-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
