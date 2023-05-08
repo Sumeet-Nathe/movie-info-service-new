@@ -1,0 +1,6 @@
+co\in\an\eye\tech\moviereviewservice\controller\MoviesInfoController.class
+co\in\an\eye\tech\moviereviewservice\domain\MovieInfo.class
+co\in\an\eye\tech\moviereviewservice\repository\MovieInfoRepository.class
+co\in\an\eye\tech\moviereviewservice\service\MovieInfoService.class
+co\in\an\eye\tech\moviereviewservice\MovieReviewServiceApplication.class
+co\in\an\eye\tech\moviereviewservice\controller\FluxAndMonoController.class

@@ -1,0 +1,5 @@
+co\in\an\eye\tech\moviereviewservice\MovieReviewServiceApplicationTests.class
+co\in\an\eye\tech\moviereviewservice\unit\controller\FluxAndMonoControllerTest.class
+co\in\an\eye\tech\moviereviewservice\intg\controller\MoviesInfoControllerIntgTest.class
+co\in\an\eye\tech\moviereviewservice\unit\controller\MoviesInfoControllerTest.class
+co\in\an\eye\tech\moviereviewservice\intg\repository\MovieInfoRepositoryTest.class
