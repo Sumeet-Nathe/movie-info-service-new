@@ -4,6 +4,7 @@ import co.in.an.eye.tech.moviereviewservice.domain.Review;
 import co.in.an.eye.tech.moviereviewservice.exceptionhandler.GlobalErrorHandler;
 import co.in.an.eye.tech.moviereviewservice.handler.ReviewsHandler;
 import co.in.an.eye.tech.moviereviewservice.repository.ReviewReactiveRepository;
+import co.in.an.eye.tech.moviereviewservice.routes.ReviewRouter;
 import co.in.an.eye.tech.moviereviewservice.validator.ReviewValidator;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
