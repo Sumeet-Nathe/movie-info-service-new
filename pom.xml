@@ -8,9 +8,9 @@
 		<version>3.0.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>co.in.an.eye.tech.moviereviewservice</groupId>
+	<groupId>co.in.an.eye.tech</groupId>
 	<artifactId>movie-review-service</artifactId>
-	<version>1.0.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>movie-review-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
